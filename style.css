@@ -1,0 +1,92 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #385D84
+}
+
+header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #23303B;
+    color: #F2F2F2;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+section {
+    padding-top: 40px;
+}
+
+section > .container {
+    background-color: #F2F2F2;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border-color: white;
+    border-style: solid;
+}
+
+input:focus {
+    border-color: #AED3F2;
+    box-shadow: 0 0 5px #AED3F2;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+select {
+    padding: 5px 5px;
+    border-radius: 5px;
+    border-color: white;
+}
+
+select:focus {
+    border-color: #AED3F2;
+    box-shadow: 0 0 5px #AED3F2;
+}
+
+.col-from {
+    margin-left: 20px;
+}
+
+.col-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-left: 15px;
+}
+
+button {
+    background-color: #E77557 !important;
+    border-color: #E77557 !important;
+    color: #F2F2F2 !important;
+    padding: 8px 15px !important;
+}
+
+button:hover {
+    background-color: #ed9a84 !important;
+    border-color: #ed9a84 !important;
+}
+
+button:focus {
+    border-color: #AED3F2 !important;
+    box-shadow: 0 0 5px #AED3F2 !important;
+}
+
+.result-area {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+#resultArea {
+    text-align: center;
+}

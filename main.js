@@ -32,11 +32,10 @@ function convert() {
         convertedAmount = usdToVnd()
         format = formatCurrency(to.value, convertedAmount)
     
-    } else {
-        alert("Please enter an existing currency")
+    } else if(from.value === to.value) {
+        alert(`"From:" currency is the same as "to:" currency`)
         return; // when function meets return will terminate the function immediately
     
     }
     result.innerHTML = `The converted amount is equal to ${format}`
 }
-

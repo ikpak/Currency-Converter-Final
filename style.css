@@ -22,7 +22,6 @@ section {
 section > .container {
     background-color: #F2F2F2;
     padding-top: 30px;
-    padding-bottom: 30px;
 }
 
 input {
@@ -54,8 +53,8 @@ select:focus {
     box-shadow: 0 0 5px #AED3F2;
 }
 
-.col-from {
-    margin-left: 20px;
+.col-amount {
+    margin-right: 25px;
 }
 
 .col-btn {
@@ -83,7 +82,8 @@ button:focus {
 }
 
 .result-area {
-    margin-top: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     font-size: 18px;
 }
 

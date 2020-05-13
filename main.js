@@ -1,4 +1,22 @@
-const currencyRatio = 23400;
+// const currencyRatio = 23400;
+
+const currencyRatio = {
+    vnd: {
+      usd: 0.000043,
+      krw: 0.051,
+      vnd: 1
+    },
+    usd: {
+      usd: 1,
+      krw: 1193.27,
+      vnd: 23235.5
+    },
+    krw: {
+      usd: 0.00084,
+      krw: 1,
+      vnd: 19.47
+    }
+  };
 
 const from = document.getElementById("fromList")
 const to = document.getElementById("toList")
@@ -6,14 +24,6 @@ const amount = document.getElementById("amountInput");
 let result = document.getElementById("resultArea")
 let convertedAmount = 0;
 let format = '';
-
-function vndToUsd() {
-    return amount.value / currencyRatio
-}
-
-function usdToVnd() {
-    return amount.value * currencyRatio
-}
 
 function formatCurrency(type, value) {
     const formatter = new Intl.NumberFormat(type, {
@@ -24,18 +34,9 @@ function formatCurrency(type, value) {
 }
 
 function convert() {
-    if(from.value === 'VND' && to.value === 'USD') {
-        convertedAmount = vndToUsd()
-        format = formatCurrency(to.value, convertedAmount)
-    
-    } else if(from.value === 'USD' && to.value === 'VND') {
-        convertedAmount = usdToVnd()
-        format = formatCurrency(to.value, convertedAmount)
-    
-    } else if(from.value === to.value) {
-        alert(`"From:" currency is the same as "to:" currency`)
-        return; // when function meets return will terminate the function immediately
-    
-    }
+    convertedAmount = amount.value * currencyRatio[from.value][to.value]
+
+    format = formatCurrency(to.value, convertedAmount)
+
     result.innerHTML = `The converted amount is equal to ${format}`
 }
